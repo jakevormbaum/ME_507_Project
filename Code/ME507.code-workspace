@@ -1,9 +1,7 @@
 {
-	"folders": [
-		{
-			"name": "MPU6050_DMP6",
-			"path": "MPU6050_DMP6"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }
