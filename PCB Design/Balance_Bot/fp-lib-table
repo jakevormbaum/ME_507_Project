@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "ME507A")(type "KiCad")(uri "C:/Users/Jake/Documents/GitHub/ME-507-Project/PCB Design/ME507A_KiCAD/footprints/ME507A.pretty")(options "")(descr ""))
+)
