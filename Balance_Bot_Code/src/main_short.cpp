@@ -26,7 +26,7 @@
 #include "Wire.h"
 
 // class default I2C address is 0x68
-// specific I2C addresses may be passed as a parametekr here
+// specific I2C addresses may be passed as a parameter here
 // AD0 low = 0x68 (default for SparkFun breakout and InvenSense evaluation board)
 // AD0 high = 0x69
 MPU6050 mpu;
