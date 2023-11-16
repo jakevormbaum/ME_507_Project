@@ -64,11 +64,11 @@
       39,
       40
     ],
-    "visible_layers": "ffdffff_ffffffff",
+    "visible_layers": "fffffff_ffffffff",
     "zone_display_mode": 0
   },
   "meta": {
-    "filename": "Balance_Bot.kicad_prl",
+    "filename": "Balance_Bot_Bad.kicad_prl",
     "version": 3
   },
   "project": {

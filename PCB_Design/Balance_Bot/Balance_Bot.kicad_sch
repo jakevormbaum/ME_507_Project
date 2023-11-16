@@ -2061,6 +2061,30 @@
     )
   )
 
+  (symbol (lib_id "Mechanical:MountingHole") (at 21.59 139.7 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 192076ec-ae72-46f5-89ff-2b76e87d0d23)
+    (property "Reference" "H6" (at 24.13 138.43 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "IMU MountingHole" (at 24.13 140.97 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 21.59 139.7 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 21.59 139.7 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "Balance_Bot"
+        (path "/983de3f5-cd8b-4631-a29e-093bfdfe9949"
+          (reference "H6") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 234.95 160.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1a7da956-6503-420b-970d-682cb597dc24)
@@ -3174,6 +3198,30 @@
       (project "Balance_Bot"
         (path "/983de3f5-cd8b-4631-a29e-093bfdfe9949"
           (reference "#PWR08") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 21.59 134.62 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid d4ff9593-d34b-4539-9f9b-f69cafefb31c)
+    (property "Reference" "H5" (at 24.13 133.35 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "IMU MountingHole" (at 24.13 135.89 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 21.59 134.62 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 21.59 134.62 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "Balance_Bot"
+        (path "/983de3f5-cd8b-4631-a29e-093bfdfe9949"
+          (reference "H5") (unit 1)
         )
       )
     )
