@@ -441,7 +441,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../CAD/Balance_Bot_PCB.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""

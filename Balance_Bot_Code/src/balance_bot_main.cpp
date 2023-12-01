@@ -14,6 +14,7 @@
 #include "MPU6050_6Axis_MotionApps20.h"
 #include "Wire.h"
 #include "task_read_imu.h"
+#include "task_drive_motors.h"
 
 extern Share<float> angle;
 
@@ -24,7 +25,8 @@ void setup(void)
     {
     }
     Serial << "Balance Bot!" << endl;
-    xTaskCreate(task_read_imu, "Read IMU", 2048, NULL, 2, NULL);
+    // xTaskCreate(task_read_imu, "Read IMU", 2048, NULL, 4, NULL);
+    xTaskCreate(task_drive_motors, "Drive Motors", 2048, NULL, 2, NULL);
 }
 
 void loop(void)
