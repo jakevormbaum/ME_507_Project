@@ -16,7 +16,7 @@
 Share<float> angle;
 
 // IMU sample rate (Hz)
-const uint8_t imu_rate = 20;
+const uint8_t imu_rate = 40;
 
 MPU6050 mpu(0x69);  // Delete (0x69) for breakout board
 

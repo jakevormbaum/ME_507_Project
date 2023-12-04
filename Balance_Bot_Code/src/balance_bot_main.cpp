@@ -1,8 +1,5 @@
-/** @file  task_debounce.cpp
- *         This file contains a homework assignment task that implements
- *         a four part state machine. Using GPIO 13 as a input, the press
- *         of a button will pull the signal to ground and cause
- *         movement between states.
+/** @file  balance_bot_main.cpp
+ * 
  * @author Jake Vormbaum
  */
 
@@ -10,11 +7,8 @@
 #include "PrintStream.h"
 #include "taskqueue.h"
 #include "taskshare.h"
-#include "I2Cdev.h"
-#include "MPU6050_6Axis_MotionApps20.h"
-#include "Wire.h"
 #include "task_read_imu.h"
-#include "task_drive_motors.h"
+#include "task_test_motors.h"
 
 extern Share<float> angle;
 
@@ -26,7 +20,7 @@ void setup(void)
     }
     Serial << "Balance Bot!" << endl;
     // xTaskCreate(task_read_imu, "Read IMU", 2048, NULL, 4, NULL);
-    xTaskCreate(task_drive_motors, "Drive Motors", 2048, NULL, 2, NULL);
+    xTaskCreate(task_test_motors, "Test Motors", 2048, NULL, 2, NULL);
 }
 
 void loop(void)
