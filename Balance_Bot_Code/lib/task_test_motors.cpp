@@ -20,7 +20,7 @@
 #define max_signal 255
 #define delay_time 1
 
-void task_drive_motors(void *p_params)
+void task_test_motors(void *p_params)
 {
     Serial.begin(115200);
     while (!Serial)
