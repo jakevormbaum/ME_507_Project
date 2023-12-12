@@ -1,5 +1,7 @@
 /** @file  task_drive_motors.cpp
  *
+ * @brief Implementation of the task to drive motors using a PID controller.
+ *
  * @author Jake Vormbaum
  */
 
@@ -31,6 +33,12 @@ int speedRight = 0;
 extern Share<int16_t> control;
 int16_t dutyCycle;
 
+
+/**
+ * @brief Task function to drive motors using a PID controller.
+ *
+ * @param p_params Task parameters (not used).
+ */
 void task_drive_motors(void *p_params)
 {
     Serial.begin(115200);

@@ -1,3 +1,13 @@
+/** @file balance_bot_web_server.cpp
+ *
+ * @brief Main file for the Balance Bot web server application.
+ *
+ * This file contains the setup and loop functions, as well as the implementation of tasks
+ * responsible for handling the web server, reading IMU data, and serving HTML pages.
+ *
+ * @author Jack Raventos
+ */
+
 #include <Arduino.h>
 #include <Wire.h>
 #include <WiFi.h>
@@ -10,6 +20,12 @@ float imuAngles[3];
 
 WebServer server(80);
 
+/**
+ * @brief Generates the HTML header for the web page.
+ *
+ * @param a_string The string to which the HTML header will be appended.
+ * @param page_title The title of the HTML page.
+ */
 
 void HTML_header(String& a_string, const char* page_title) {
     a_string += "<!DOCTYPE html> <html>\n";
@@ -37,6 +53,10 @@ void HTML_header(String& a_string, const char* page_title) {
     a_string += "</head>\n";
 }
 
+
+/**
+ * @brief Sets up the WiFi access point for the Balance Bot.
+ */
 void setup_wifi() {
     Serial.begin(115200);
     delay(100);
@@ -49,6 +69,10 @@ void setup_wifi() {
     Serial << "done." << endl;
 }
 
+
+/**
+ * @brief Handles the HTTP request for IMU data.
+ */
 void handle_IMU() {
     String imu_data = "{";
     imu_data += "\"pitch\":" + String(imuAngles[1], 2) + ",";
@@ -57,6 +81,10 @@ void handle_IMU() {
     server.send(200, "application/json", imu_data);
 }
 
+
+/**
+ * @brief Handles the HTTP request for the document root.
+ */
 void handle_DocumentRoot() {
     Serial << "HTTP request from client #" << server.client() << endl;
 
@@ -74,7 +102,11 @@ void handle_DocumentRoot() {
 }
 
 
-
+/**
+ * @brief Task function for the web server.
+ *
+ * Handles incoming client requests and serves web pages.
+ */
 void task_webserver(void* p_params) {
     server.on("/", handle_DocumentRoot);
     server.onNotFound([]() {
@@ -91,7 +123,11 @@ void task_webserver(void* p_params) {
 }
 
 
-
+/**
+ * @brief Task function for reading IMU data.
+ *
+ * Reads data from the MPU6050 IMU and updates the global imuAngles array.
+ */
 void task_read_imu(void* p_params) {
     Wire.begin();
     mpu.initialize();
@@ -147,7 +183,11 @@ void task_read_imu(void* p_params) {
         vTaskDelay(1000 / 40);
     }
 }
-
+/**
+ * @brief Arduino setup function.
+ *
+ * Initializes WiFi, tasks, and server routes.
+ */
 void setup() {
     setup_wifi();
     Wire.begin();
@@ -156,6 +196,9 @@ void setup() {
     server.on("/imu", HTTP_GET, handle_IMU);
 }
 
+/**
+ * @brief Arduino main loop function.
+ */
 void loop() {
     vTaskDelay(1000);
 }

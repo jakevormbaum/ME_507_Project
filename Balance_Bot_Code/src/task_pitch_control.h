@@ -1,5 +1,7 @@
 /** @file  task_pitch_control.h
- *         
+ *
+ * @brief Header file for the task to control pitch using an MPU6050 and PID controller.
+ *
  * @author Jake Vormbaum
  */
 
@@ -13,7 +15,8 @@
 #include "PID_v1.h"
 
 /** @brief
- *  @details
- *  @param   p_params A pointer to function parameters which we don't use.
+ *  @details Task function to control pitch using an MPU6050 and PID controller.
+ *
+ *  @param p_params A pointer to function parameters which we don't use.
  */
 void task_pitch_control(void *p_params);

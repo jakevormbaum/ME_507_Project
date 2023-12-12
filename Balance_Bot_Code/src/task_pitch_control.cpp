@@ -1,5 +1,7 @@
 /** @file  task_pitch_control.cpp
  *
+ * @brief Implementation of the task to control pitch using an MPU6050 and PID controller.
+ *
  * @author Jake Vormbaum
  */
 
@@ -51,6 +53,12 @@ double output;
 // PID setup
 PID myPID(&input, &output, &setpoint, kP, kI, kD, REVERSE);
 
+
+/**
+ * @brief Task function to control pitch using an MPU6050 and PID controller.
+ *
+ * @param p_params A pointer to function parameters which we don't use.
+ */
 void task_pitch_control(void *p_params)
 {
     // join I2C bus (I2Cdev library doesn't do this automatically)
@@ -110,7 +118,7 @@ void task_pitch_control(void *p_params)
     }
 
     myPID.SetMode(AUTOMATIC);
-    myPID.SetOutputLimits(60, 225);
+    myPID.SetOutputLimits(35, 240); 
 
     for (;;)
     {
