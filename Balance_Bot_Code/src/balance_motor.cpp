@@ -1,7 +1,10 @@
 /** @file  task_balance_control.cpp
  *
  * @brief Implementation of the DRV8871_Motor class for controlling motors in a balance control task.
- *
+ *  * This code uses several external libraries. Make sure to include them in your project.
+ * - [ME507-Support library](https://github.com/spluttflob/ME507-Support)
+ * - [Arduino-PrintStream library](https://github.com/spluttflob/Arduino-PrintStream.git)
+ * 
  * @author Jake Vormbaum
  */
 

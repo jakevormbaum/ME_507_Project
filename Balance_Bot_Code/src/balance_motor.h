@@ -2,7 +2,11 @@
  *
  * @brief Header file for motor control tasks.
  *
- * @author Jake Vormbaum
+ * *  * This code uses several external libraries. Make sure to include them in your project.
+ * - [ME507-Support library](https://github.com/spluttflob/ME507-Support)
+ * - [Arduino-PrintStream library](https://github.com/spluttflob/Arduino-PrintStream.git)
+ *
+ *  @author Jake Vormbaum
  */
 
 #include <Arduino.h>

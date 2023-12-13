@@ -5,6 +5,10 @@
  * This file contains the setup and loop functions, as well as the implementation of tasks
  * responsible for handling the web server, reading IMU data, and serving HTML pages.
  *
+ *  * This code uses several external libraries. Make sure to include them in your project.
+ * - [MPU6050 library](https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050)
+ * - [ME507-Support library](https://github.com/spluttflob/ME507-Support)
+ * - [Arduino-PrintStream library](https://github.com/spluttflob/Arduino-PrintStream.git)
  * @author Jack Raventos
  */
 
